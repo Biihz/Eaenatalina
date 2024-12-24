@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <title>Natal</title>
+</head>
+<body>
+  <div class="container">
+    
+    <audio autoplay muted id="background-audio">
+      <source src="assets/natal.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <a class="prev" href="#" onclick="addSlides(-1)">
+      <span>&#10094;</span>
+      <span class="prev-text">Voltar</span>
+    </a>
+    <div>
+      <div class="slides fade">
+        <img src="assets/slide5.gif" />
+        <h2 class="title">Motivos, pra quê?</h2>
+        <h6 class="content">Sua simplicidade e carinho fazem com que eu goste cada vez mais de você 
+          meu xuxu. Gosto muito da sua companhia, mesmo quando a gente não consiga fazer algo juntos 
+          o tempo todo, eu sempre anseio por mais momentos com você. Sei que não sou a 
+          melhor companhia, nem a mais falante ou divertida, mas só de estar comigo já faz uma grande 
+          diferença, e sei que pode ser melhor, e cada vez que passamos o tempo sei que é melhor.</h6>
+      </div>
+      <div class="slides fade">
+        <img src="assets/slide3.gif" />
+        <h2 class="title"> </h2>
+        <h6 class="content">Amo o gosto que você tem pelas coisas, seja filmes, 
+          ideias e até pessoas. O carinho que 
+          eu não consigo ter por elas, você completa com tanta naturalidade, acho muito fofo da sua parte. Além
+          do fato de me fazer rir semmpree, eu me tornei mais sorridente por causa disso :D 
+         </h6>
+      </div>
+      <div class="slides fade">
+        <img src="assets/slide4.gif" />
+        <h2 class="title"> </h2>
+        <h6 class="content"> Desde o dia do studio ghibli eu já soube.. Você me encantou de um jeitinho unico, sabe? 
+          Teve muitas situações que não foram nada coincidentes e me provaram isso.
+          Até sua maneira tranquila e um pouco desdenhosa de lidar com as coisas... Mas que eu respeito
+        e admiro.</h6>
+      </div>
+      <div class="slides fade">
+        <img src="assets/slide2.png" />
+        <h2 class="title"> </h2>
+        <h6 class="content"> Você é pé firme, e isso falta em mim. Até me estressa por ser um pouco confuso as vezes. 
+          Mas saiba que tudo isso é apenas no papel, não somos perfeitos, mas reais, e isso é mais do que suficiente para mim.. No fim das contas eu amo tudo que você faz. Tudo por aqui é complicado,
+          sei que palavras às vezes não bastam.
+          Porém, eu já pensei em algo para nós :D 
+          </h6>
+      </div>
+      <div class="slides fade">
+        <img src="assets/slide1.png" />
+        <h2 class="title"> </h2>
+        <h6 class="content">
+          Eu sei que 
+          você não gosta desse tipo de coisa, mas eu amo fazer isso para e por você. Então aceite de coração tá bão?
+        
+        <br/><br/>
+           Saiba que você faz sim os meus dias melhores, mesmo que você não acredite.
+            De qualquer forma, eu espero poder retribuir tudo isso sempre.<br/><br/>
+            Feliz natal! Que esse dia, como todos, seja iluminado pra guiar o meu caminho até vc.<br/><br/>
+          <span>(Beaah)</span>
+        </h6>
+      </div>
+    </div>
+    <div class="slides fade">
+      <img src="assets/logoyoutube.jpeg" />
+      <h2 class="title"> Youmusica ou Youforme?</h2>
+      <h6 class="content">
+        Músiquinhas que me lembram oc 
+        <a href="https://www.youtube.com/watch?v=M-h2KwQ2o4Q&list=PLwOcpenlZ-fUoR33uIqMqr7hWRnWh4Ryy" 
+        target="_blank" style="color:
+         blue; text-decoration: underline;">aqui</a>
+       </h6>
+    </div>
+    <div class="footer">
+      <button class="button" onclick="addSlides(1)">Próximo</button>
+      <div class="dot-box">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+  </div>
+  <!-- Botão para ativar o som -->
+  <button id="audio-toggle" onclick="ativarSom()">Ativar Som</button>
+
+  <script src="handle.js"></script>
+  <script>
+    function ativarSom() {
+      const audio = document.getElementById('background-audio');
+      audio.muted = false; // Remove o mute
+      audio.play(); // Toca o áudio (se ainda não estiver tocando)
+      document.getElementById('audio-toggle').style.display = 'none'; // Esconde o botão após ativar o som
+    }
+  </script>
+</body>
+</html>
